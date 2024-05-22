@@ -19,8 +19,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 //builder.Services.AddSingleton<IPostgreSQL, PostgreSQL>();
-builder.Services.AddSingleton<UserService>();
-builder.Services.AddSingleton<SessionService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ISessionService, SessionService>();
 
 
 

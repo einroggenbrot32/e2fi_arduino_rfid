@@ -39,29 +39,36 @@ namespace ZeiterfassungsAPI.Controllers
 
         [HttpPost]
         [Route("/zeiterfassung/sessions/update")]
-        public ActionResult<Session> UpdateSession(int rfid)
+        public ActionResult<Session> UpdateSession(string rfid)
         {
-            var user = _userService.GetUserByRFID(rfid);
-
-            if (user != null)
+            if (_sessionService.ChipExists(rfid))
             {
-                var hasOpenSession = _sessionService.hasOpenSession(_userService.GetUserByRFID(rfid));
+                var user = _userService.GetUserByRFID(rfid);
 
-                if (hasOpenSession)
+                if (user != null)
                 {
-                    var session = _sessionService.GetSessionExistingOrNew(user);
-                    return Ok(_sessionService.EndSession(session));
+                    var hasOpenSession = _sessionService.hasOpenSession(_userService.GetUserByRFID(rfid));
+
+                    if (hasOpenSession)
+                    {
+                        var session = _sessionService.GetSessionExistingOrNew(user);
+                        return Ok(_sessionService.EndSession(session));
+                    }
+                    else
+                    {
+                        return Ok(_sessionService.GetSessionExistingOrNew(user));
+                    }
                 }
                 else
                 {
-                    return Ok(_sessionService.GetSessionExistingOrNew(user));
+                    return BadRequest();
                 }
+
             }
             else
             {
-                return BadRequest("RFID-Chip ist keinem user zugewiesen.");
+                return BadRequest();
             }
-
         }
         #endregion
     }

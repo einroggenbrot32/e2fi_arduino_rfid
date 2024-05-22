@@ -12,6 +12,7 @@ namespace ZeiterfassungsAPI.Data
         }
         public DbSet<Session> Sessions { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<RfidChip> RfidChip { get; set; }
 
 
     }

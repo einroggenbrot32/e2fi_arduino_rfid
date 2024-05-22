@@ -14,6 +14,8 @@ namespace ZeiterfassungsAPI.Services
         public bool SaveChanges();
 
         public bool hasOpenSession(User user);
+
+        public bool ChipExists(string rfid);
     }
 
 }

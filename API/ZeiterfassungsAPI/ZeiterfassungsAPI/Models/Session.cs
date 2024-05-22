@@ -9,9 +9,9 @@ namespace ZeiterfassungsAPI.Models
         public int Id { get; set; }
         [Column("user_id")]
         public int UserId { get; set; }
-        [Column("startzeit")]
-        public DateTime Startzeit { get; set; }
-        [Column("endzeit")]
+        [Column("startzeit", TypeName = "timestamp(6)")]
+        public DateTime Startzeit { get; set; } 
+        [Column("endzeit", TypeName = "timestamp(6)")]
         public Nullable<DateTime> Endzeit { get; set; }
     }
 }
