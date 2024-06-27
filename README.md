@@ -35,8 +35,10 @@ Befehl              Ausgabe
 ![image](https://github.com/einroggenbrot32/e2fi_arduino_rfid/assets/112704792/ecea34ad-8993-43f2-b521-68f93e018a57)
 
 
-# API-Endpunkte
-ENDPUNKTE BESCHREIBEN
+# API-Endpunkt-URL's
+- /zeiterfassung/sessions/getallactive --> alle noch eingeloggten, aktiven nutzer werden angezeigt
+- /zeiterfassung/sessions/update --> updatet alle einträge, entfernt ausgeloggte RFID's
+- /zeiterfassung/sessions/getall --> listet alle im System vorhanden ID's auf
 
 # Mikrocontroller/ Sensor
 HIER EIN BILD DES ARDUINO
