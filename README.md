@@ -32,7 +32,8 @@ Bereits eingeloggte User werden bei erneutem Stempeln ausgeloggt.
 Befehl              Ausgabe
 
 
-NOCH ALS EPK!!!!!!! LUKAS
+![image](https://github.com/einroggenbrot32/e2fi_arduino_rfid/assets/112704792/ecea34ad-8993-43f2-b521-68f93e018a57)
+
 
 # API-Endpunkte
 ENDPUNKTE BESCHREIBEN
