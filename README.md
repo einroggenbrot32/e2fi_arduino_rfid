@@ -4,7 +4,7 @@
 Webbasiertes Login-/Zeiterfassungssystem mit mobilem RFID-Sensor. 
 
 # Aufbau
-Das Projekt besteht aus einer in der Cloud gehosteten RESTApi, deren Endpunkte von einem Mikrocontroller mit RFID-Sensorik angesprochen werden. Die Daten werden auf einer PostgreSQL-Datenbank gespeichert.
+Das Projekt besteht aus einer in der Cloud gehosteten RESTApi, deren Endpunkte von einem Mikrocontroller mit RFID-Sensorik angesprochen werden. Die Daten werden in einer bei Amazon gehosteten PostgreSQL-Datenbank gespeichert.
 Ein CLI-Tool gibt (ebenfalls über Calls auf die API) diverse Auskünfte über die erfassten Daten. Außerdem lassen sich mittels des CLI-Tools User neue registrieren.
 
 GRAFIK NARVIK
