@@ -1,4 +1,4 @@
-# e2fi_arduino_rfid
+# Arduino E2FI Projekt Zusammenfassung | by Narvik & Lukas
 
 # Projektbeschreibung
 Webbasiertes Login-/Zeiterfassungssystem mit mobilem RFID-Sensor. 
