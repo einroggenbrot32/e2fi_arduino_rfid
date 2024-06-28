@@ -7,7 +7,7 @@ Webbasiertes Login-/Zeiterfassungssystem mit mobilem RFID-Sensor.
 Das Projekt besteht aus einer in der Cloud gehosteten RESTApi, deren Endpunkte von einem Mikrocontroller mit RFID-Sensorik angesprochen werden. Die Daten werden in einer bei Amazon gehosteten PostgreSQL-Datenbank gespeichert.
 Ein CLI-Tool gibt (ebenfalls über Calls auf die API) diverse Auskünfte über die erfassten Daten. Außerdem lassen sich mittels des CLI-Tools User neue registrieren.
 
-GRAFIK NARVIK
+![image](https://github.com/einroggenbrot32/e2fi_arduino_rfid/assets/112704792/ecea34ad-8993-43f2-b521-68f93e018a57)
 
 # Technologien
 Die RESTApi ist mit C# in der Dotnet-Umgebung programmiert und wird auf einem Amazon(?)-Server gehostet.
@@ -32,7 +32,7 @@ Bereits eingeloggte User werden bei erneutem Stempeln ausgeloggt.
 Befehl              Ausgabe
 
 
-![image](https://github.com/einroggenbrot32/e2fi_arduino_rfid/assets/112704792/ecea34ad-8993-43f2-b521-68f93e018a57)
+EPK!!!! LUKAS
 
 
 # API-Endpunkt-URL's
