@@ -41,7 +41,7 @@ EPK!!!! LUKAS
 - /zeiterfassung/sessions/getall --> listet alle im System vorhanden ID's auf
 
 # Mikrocontroller/ Sensor
-HIER EIN BILD DES ARDUINO
+![image](https://github.com/einroggenbrot32/e2fi_arduino_rfid/assets/112704792/b5811dc8-a777-4e70-8b17-e7ace0457049)
 
 # CLI Tool
 Liste an Befehlen:
