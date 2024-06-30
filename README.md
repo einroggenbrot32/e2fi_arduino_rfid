@@ -26,7 +26,7 @@ Danach kann ich per Befehl die Daten ausgeben oder auch über erneuten Kontakt m
 Anschließend kann über einen weiteren Befehl dem User eine RFID zugewiesen werden. Der Benutzer wird aufgefordert, den RFID-Chip, den er zuweisen möchte, zu scannen (an den Sensor am Arduino zu halten).
 War die Zuweisung erfolgreich, bekommt der Benutzer eine Bestätigung über das CLI-Tool.*
 
-#### AKTUELLER STAND
+#### AKTUELLER STAND:
 User müssen noch manuell auf der Datenbank angelegt werden. Siehe dazu die Befehle Unter ZeiterfassungAPI/SQL.
 
 ## Zeit erfassen
