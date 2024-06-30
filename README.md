@@ -42,9 +42,9 @@ Befehl              Ausgabe
 getall              gibt alle Sessions aus, die je erfasst wurden
 getactive           gibt alle aktiven Sessions aus (das heißt solche, die eine Start-, aber keine Endzeit haben)
 
-//*** Hier sind natürlich viele sinnvolle Erweiterungen denkbar ... vorerst soll das CLI-Tool allerdings lediglich das Konzept demonstrieren.
+#### Hier sind natürlich viele sinnvolle Erweiterungen denkbar ... vorerst soll das CLI-Tool allerdings lediglich das Konzept demonstrieren.
 
-##API-Endpunkt-URL's
+## API-Endpunkt-URL's
 - /zeiterfassung/sessions/getallactive --> alle noch eingeloggten, aktiven Nutzer/Sessions werden angezeigt
 - /zeiterfassung/sessions/update --> updatet alle einträge, entfernt ausgeloggte RFID's -> Updatet die Session wenn ein Chip erneut an den Sensor gehalten wurde
 - /zeiterfassung/sessions/getall --> listet alle im System vorhanden Session's auf
