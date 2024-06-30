@@ -11,7 +11,7 @@
 #define C_PASS "abcdefgh"
 
 //*** API-Konstanten
-#define C_PORT 5001
+#define C_PORT 7024
 IPAddress server_ip(192, 168, 137, 1);
 
 //*** RFID-Sensor
@@ -135,11 +135,13 @@ void loop()
 
 
   //*** POST .../update an API
-  if (client.connect("server_ip", 5000)){
+  if (client.connect(server_ip, C_PORT)){
     Serial.println("Verbindung mit API hergestellt");
     client.println("POST /zeiterfassung/sessions/update?rfid=" + WertDEZ + " HTTP/1.1");
   } else {
     Serial.println("Verbindung zur API fehlgeschlagen");
   }
+
+  delay(1000)
 }
 

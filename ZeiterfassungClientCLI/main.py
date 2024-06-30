@@ -7,6 +7,12 @@ import re
 STARTUP = \
 "=== NARVIKSOFT ZEITERFASSUNG 1.0 ===========================\n\n"\
 
+HELP = \
+"commands: \n"\
+"  getactive: prints all active sessions\n" \
+"  getall: prints all sessions\n"\
+"  help: print help\n"
+
 VERIFY = False
 API_BASE_URL = "https://localhost:7024/zeiterfassung/"
 
@@ -74,11 +80,10 @@ def display_session(session):
     print(text_to_print)
 
 
-#def _get_all():
+# weitere denkbare abfragen
+#  - Statistiken zu einzelnen Usern
+#  - neue User registrieren
 
-#def _get_user_info(id):
-
-#def _get_all_users():
 
 ####### PROGRAMM ##############
 
@@ -86,6 +91,7 @@ def display_session(session):
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 print(STARTUP)
+print(HELP)
 
 
 # APP LOOP
@@ -100,6 +106,8 @@ while(run):
         sessions = _get_all_sessions()
         for s in sessions:
             display_session(s)
+    if (cmd == "help"):
+        print(HELP)
     if (cmd == "cls"):
         clear()
         print(STARTUP)

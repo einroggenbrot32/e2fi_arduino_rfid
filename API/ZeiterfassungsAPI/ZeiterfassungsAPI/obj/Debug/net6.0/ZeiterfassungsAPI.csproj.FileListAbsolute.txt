@@ -35,3 +35,9 @@ C:\Users\lukas\Documents\Programmierzeug\Berufsschule\e2fi_arduino_rfid\API\Zeit
 C:\Users\lukas\Documents\Programmierzeug\Berufsschule\e2fi_arduino_rfid\API\ZeiterfassungsAPI\ZeiterfassungsAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\lukas\Documents\Programmierzeug\Berufsschule\e2fi_arduino_rfid\API\ZeiterfassungsAPI\ZeiterfassungsAPI\bin\Debug\net6.0\Npgsql.dll
 C:\Users\lukas\Documents\Programmierzeug\Berufsschule\e2fi_arduino_rfid\API\ZeiterfassungsAPI\ZeiterfassungsAPI\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\lukas\Documents\Programmierzeug\Berufsschule\e2fi_arduino_rfid\API\ZeiterfassungsAPI\ZeiterfassungsAPI\bin\Debug\net6.0\Amazon.Lambda.APIGatewayEvents.dll
+C:\Users\lukas\Documents\Programmierzeug\Berufsschule\e2fi_arduino_rfid\API\ZeiterfassungsAPI\ZeiterfassungsAPI\bin\Debug\net6.0\Amazon.Lambda.ApplicationLoadBalancerEvents.dll
+C:\Users\lukas\Documents\Programmierzeug\Berufsschule\e2fi_arduino_rfid\API\ZeiterfassungsAPI\ZeiterfassungsAPI\bin\Debug\net6.0\Amazon.Lambda.AspNetCoreServer.dll
+C:\Users\lukas\Documents\Programmierzeug\Berufsschule\e2fi_arduino_rfid\API\ZeiterfassungsAPI\ZeiterfassungsAPI\bin\Debug\net6.0\Amazon.Lambda.Core.dll
+C:\Users\lukas\Documents\Programmierzeug\Berufsschule\e2fi_arduino_rfid\API\ZeiterfassungsAPI\ZeiterfassungsAPI\bin\Debug\net6.0\Amazon.Lambda.Logging.AspNetCore.dll
+C:\Users\lukas\Documents\Programmierzeug\Berufsschule\e2fi_arduino_rfid\API\ZeiterfassungsAPI\ZeiterfassungsAPI\bin\Debug\net6.0\Amazon.Lambda.Serialization.SystemTextJson.dll
