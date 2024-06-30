@@ -1,9 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "cr8Sa+CegMzWlioj45eVtm9gQfYdxRsXNEp5aG/Mijl9dU6ICIPHurOknogzd392c2JewEz+khe8njqMU0aHow==",
+  "dgSpecHash": "cVO1bJSkTlaSJrins5iaPckydGdQF0c3XvC5UkPnhDbz3HtdhTVR/5iDAam0MgLFvf9IkYmLC+Srpsmsk9og7w==",
   "success": true,
   "projectFilePath": "C:\\Users\\lukas\\Documents\\Programmierzeug\\Berufsschule\\e2fi_arduino_rfid\\API\\ZeiterfassungsAPI\\ZeiterfassungsAPI\\ZeiterfassungsAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\lukas\\.nuget\\packages\\amazon.lambda.apigatewayevents\\2.4.0\\amazon.lambda.apigatewayevents.2.4.0.nupkg.sha512",
+    "C:\\Users\\lukas\\.nuget\\packages\\amazon.lambda.applicationloadbalancerevents\\2.1.0\\amazon.lambda.applicationloadbalancerevents.2.1.0.nupkg.sha512",
+    "C:\\Users\\lukas\\.nuget\\packages\\amazon.lambda.aspnetcoreserver\\6.0.0\\amazon.lambda.aspnetcoreserver.6.0.0.nupkg.sha512",
+    "C:\\Users\\lukas\\.nuget\\packages\\amazon.lambda.core\\2.0.0\\amazon.lambda.core.2.0.0.nupkg.sha512",
+    "C:\\Users\\lukas\\.nuget\\packages\\amazon.lambda.logging.aspnetcore\\3.1.0\\amazon.lambda.logging.aspnetcore.3.1.0.nupkg.sha512",
+    "C:\\Users\\lukas\\.nuget\\packages\\amazon.lambda.serialization.systemtextjson\\2.1.0\\amazon.lambda.serialization.systemtextjson.2.1.0.nupkg.sha512",
     "C:\\Users\\lukas\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.0\\microsoft.entityframeworkcore.6.0.0.nupkg.sha512",
     "C:\\Users\\lukas\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.0\\microsoft.entityframeworkcore.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\lukas\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.0\\microsoft.entityframeworkcore.analyzers.6.0.0.nupkg.sha512",
@@ -27,6 +33,7 @@
     "C:\\Users\\lukas\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
     "C:\\Users\\lukas\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\lukas\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
+    "C:\\Users\\lukas\\.nuget\\packages\\system.io.pipelines\\4.7.2\\system.io.pipelines.4.7.2.nupkg.sha512",
     "C:\\Users\\lukas\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []

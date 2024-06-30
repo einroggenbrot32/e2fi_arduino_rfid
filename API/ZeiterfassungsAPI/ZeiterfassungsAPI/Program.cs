@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using ZeiterfassungsAPI.Data;
@@ -8,6 +9,7 @@ WebApplicationOptions options = new()
     ContentRootPath = AppContext.BaseDirectory,
     Args = args
 };
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,6 +38,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
 
 app.UseAuthorization();
 

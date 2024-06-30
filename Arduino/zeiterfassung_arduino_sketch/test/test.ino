@@ -1,29 +1,29 @@
 #include "MFRC522.h"
 #include "WiFiS3.h"
-#include "WiFiSSLClient.h"
+#include <ArduinoHttpClient.h>
 
-//*** Anschlüsse definieren
+
+// Anschlüsse definieren
 # define SDA 10
 # define RST 9
 
-//*** WiFi Konstanten
-#define C_SSID "HotspotWebAPI"
+// Wifi-Server/ CLient
+#define C_SSID "HotspotWebApi"
 #define C_PASS "abcdefgh"
 
-//*** API-Konstanten
-#define C_PORT 5001
-IPAddress server_ip(192, 168, 137, 1);
+// API-Konstanten
+#define C_API_BASE_URL "https://192.168.137.1:7024/zeiterfassung/"
+#define C_PORT 7042
 
-//*** RFID-Sensor
+// RFID-Empfänger benennen, Pins zuordnen
 MFRC522 mfrc522(SDA, RST);
 
 char ssid[] = C_SSID;        // your network SSID (name)
 char pass[] = C_PASS;        // your network password (use for WPA, or use as key for WEP)
 
+// WiFI-Server und Client
 int status = WL_IDLE_STATUS;
-WiFiSSLClient client;
 
-//*** diverse Funktionen für die WiFi-Verbindung/ Ausgabe von Infos
 void printWifiData() {
   // print your board's IP address:
   IPAddress ip = WiFi.localIP();
@@ -80,66 +80,76 @@ void setup()
   Serial.begin(9600);
   SPI.begin();
 
-  //***
-  Serial.println("NARVIKSOFT ZEITERFASSUNG\n");
-
-  //*** Initialisierung des RFID-Empfängers
+  // Initialisierung des RFID-Empfängers
   mfrc522.PCD_Init();
+  Serial.println("NARVIKSOFT ZEITERFASSUNG");
 
-  //*** WIFI Setup
+  // WIFI Setup
+   // check for the WiFi module:
   if (WiFi.status() == WL_NO_MODULE) {
     Serial.println("Communication with WiFi module failed!");
-
+    // don't continue
     while (true);
   }
 
-  //*** versuchen, mit dem Netzwerk zu verbinden:
-  while (status != WL_CONNECTED) {
-    Serial.print("Verbinden mit WPA SSID: ");
-    Serial.println(ssid);
+  String fv = WiFi.firmwareVersion();
+  if (fv < WIFI_FIRMWARE_LATEST_VERSION) {
+    Serial.println("Please upgrade the firmware");
+  }
 
+  // attempt to connect to WiFi network:
+  while (status != WL_CONNECTED) {
+    Serial.print("Attempting to connect to WPA SSID: ");
+    Serial.println(ssid);
+    // Connect to WPA/WPA2 network:
     status = WiFi.begin(ssid, pass);
+
+    // wait 10 seconds for connection:
     delay(10000);
   }
 
-  //*** Verbindung erfolgreich: Infos drucken
-  Serial.print("Verbindung erfolgreich: ");
+  // you're connected now, so print out the data:
+  Serial.print("You're connected to the network");
   printCurrentNet();
   printWifiData();
+
+  // Versuch, einen API Call abzusetzen
+
+    
+
 }
 
 void loop()
 {
-  String WertDEZ;
+ while(1==1)
+ {
 
-  //*** So lange scannen, bis RFID-Chip erkannt wurde
-  if (!mfrc522.PICC_IsNewCardPresent())
-  {
-    return;
-  }
-  if (!mfrc522.PICC_ReadCardSerial())
-  {
-    return;
-  }
- 
+ } 
+ //
 
-  //*** RFID in Dezimalwert umwandeln
-  for (byte i = 0; i < mfrc522.uid.size; i++)
-  {
-    // String zusammenbauen
-    WertDEZ = WertDEZ + String(mfrc522.uid.uidByte[i], DEC) + " ";
-  }
-
-  //*** RFID anzeigen
-  Serial.println("Dezimalwert: " + WertDEZ);
+}
 
 
-  //*** POST .../update an API
-  if (client.connect("server_ip", 5000)){
-    Serial.println("Verbindung mit API hergestellt");
-    client.println("POST /zeiterfassung/sessions/update?rfid=" + WertDEZ + " HTTP/1.1");
-  } else {
-    Serial.println("Verbindung zur API fehlgeschlagen");
-  }
+/*
+  // Post-request an die API
+
+   Serial.println("making POST request");
+  String contentType = "application/x-www-form-urlencoded";
+  String postData = "rfid=12345678";
+
+  client.post("https://192.168.137.1:7024/zeiterfassung/sessions/update?rfid=1");
+
+  // read the status code and body of the response
+  int statusCode = client.responseStatusCode();
+  String response = client.responseBody();
+
+  Serial.print("Status code: ");
+  Serial.println(statusCode);
+  Serial.print("Response: ");
+  Serial.println(response);
+*/
+
+  // kurze Pause, damit nur ein Wert gelesen wird
+  delay(1000);
 }
 
