@@ -1,13 +1,13 @@
-# e2fi_arduino_rfid
+# Arduino E2FI Projekt Zusammenfassung | by Narvik & Lukas
 
 # Projektbeschreibung
 Webbasiertes Login-/Zeiterfassungssystem mit mobilem RFID-Sensor. 
 
 # Aufbau
-Das Projekt besteht aus einer in der Cloud gehosteten RESTApi, deren Endpunkte von einem Mikrocontroller mit RFID-Sensorik angesprochen werden. Die Daten werden auf einer PostgreSQL-Datenbank gespeichert.
+Das Projekt besteht aus einer in der Cloud gehosteten RESTApi, deren Endpunkte von einem Mikrocontroller mit RFID-Sensorik angesprochen werden. Die Daten werden in einer bei Amazon gehosteten PostgreSQL-Datenbank gespeichert.
 Ein CLI-Tool gibt (ebenfalls über Calls auf die API) diverse Auskünfte über die erfassten Daten. Außerdem lassen sich mittels des CLI-Tools User neue registrieren.
 
-GRAFIK NARVIK
+![image](https://github.com/einroggenbrot32/e2fi_arduino_rfid/assets/112704792/ecea34ad-8993-43f2-b521-68f93e018a57)
 
 # Technologien
 Die RESTApi ist mit C# in der Dotnet-Umgebung programmiert und wird auf einem Amazon(?)-Server gehostet.
@@ -17,14 +17,15 @@ Für den Mikrocontroller verwenden wir einen RFID-Sensor von ?????. Der Chip ist
 
 # Prozessbeschreibung
 Bevor Zeiten erfasst werden können, muss mindestens ein User existieren, dem eine RFID zugewiesen wurde.
+Danach kann ich per Befehl die Daten ausgeben oder auch über erneuten Kontakt mit dem Sensor die Session beenden.
 
 ## User erstellen und RFID zuweisen
 Im CLI-Tool kann über den Befehl "????" ein neues User angelegt werden. Dieser erhält eine Personalnummer und einen Namen. Letzterer wird vom Benutzer eingegeben.
 Anschließend kann über den Befehl "???? + Personalnummer" eine RFID zugewiesen werden. Der Benutzer wird aufgefordert, den RFID-Chip, den er zuweisen möchte, zu scannen (an den Sensor am Arduino zu halten).
-War die Zuweisung erfolgreich, bekommt der Benutzer eine Bestätigung über das CLI-Tool. Außerdem ertönt ein Signal am Arduino und es leuchtet eine gründe LED auf.
+War die Zuweisung erfolgreich, bekommt der Benutzer eine Bestätigung über das CLI-Tool.
 
 ## Zeit erfassen
-Die Zeiterfassung erfolgt durch einfaches An- und Abstempeln durch scannen des jeweiligen RFID-Chips am Arduino/ Sensor.
+Die Zeiterfassung erfolgt durch einfaches scannen(in folgenden Stempeln genannt) des jeweiligen RFID-Chips am Arduino/ Sensor.
 Bereits eingeloggte User werden bei erneutem Stempeln ausgeloggt.
 
 ## Abfrage von Informationen (Zeiten, Userinfos, etc.)
@@ -32,13 +33,18 @@ Bereits eingeloggte User werden bei erneutem Stempeln ausgeloggt.
 Befehl              Ausgabe
 
 
-NOCH ALS EPK!!!!!!! LUKAS
+EPK!!!! LUKAS
 
-# API-Endpunkte
-ENDPUNKTE BESCHREIBEN
+
+# API-Endpunkt-URL's
+- /zeiterfassung/sessions/getallactive --> alle noch eingeloggten, aktiven Nutzer/Sessions werden angezeigt
+- /zeiterfassung/sessions/update --> updatet alle einträge, entfernt ausgeloggte RFID's -> Updatet die Session wenn ein Chip erneut an den Sensor gehalten wurde
+- /zeiterfassung/sessions/getall --> listet alle im System vorhanden Session's auf
+- /zeiterfassung/users/getUserNameById --> listet alle vorhanden User anhand deren ID auf
+- /zeiterfassung/users/getall --> gibt alle User aus - egal ob ein oder ausgeloggt
 
 # Mikrocontroller/ Sensor
-HIER EIN BILD DES ARDUINO
+![image](https://github.com/einroggenbrot32/e2fi_arduino_rfid/assets/112704792/b5811dc8-a777-4e70-8b17-e7ace0457049)
 
 # CLI Tool
 Liste an Befehlen:
