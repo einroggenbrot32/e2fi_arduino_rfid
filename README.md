@@ -1,5 +1,9 @@
 # Arduino E2FI Projekt Zusammenfassung | by Narvik & Lukas
 
+### KOMMENTAR 30.06.2024
+Aktuell wird die API noch nicht in der Cloud gehostet, sondern nur lokal auf der Maschine. Die Datenbank ebenso.
+Der Arduino wird mit einen WLAN-Hotspot der Maschine verbunden und macht die API-Calls über deren IP.  
+
 # Projektbeschreibung
 Webbasiertes Login-/Zeiterfassungssystem mit mobilem RFID-Sensor. 
 
@@ -10,7 +14,7 @@ Ein CLI-Tool gibt (ebenfalls über Calls auf die API) diverse Auskünfte über d
 ![image](https://github.com/einroggenbrot32/e2fi_arduino_rfid/assets/112704792/ecea34ad-8993-43f2-b521-68f93e018a57)
 
 # Technologien
-Die RESTApi ist mit C# in der Dotnet-Umgebung programmiert und wird auf einem Amazon(?)-Server gehostet.
+Die RESTApi ist mit C# in der Dotnet-Umgebung programmiert und wird auf einem Amazon-Server gehostet.
 Das CLI-Tool ist in Python realisiert.
 
 Für den Mikrocontroller verwenden wir einen RFID-Sensor von Amazon. Der Chip ist aus dem selben Paket.
