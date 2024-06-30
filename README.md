@@ -13,7 +13,7 @@ Ein CLI-Tool gibt (ebenfalls über Calls auf die API) diverse Auskünfte über d
 Die RESTApi ist mit C# in der Dotnet-Umgebung programmiert und wird auf einem Amazon(?)-Server gehostet.
 Das CLI-Tool ist in Python realisiert.
 
-Für den Mikrocontroller verwenden wir einen RFID-Sensor von ?????. Der Chip ist vom selben Hersteller.
+Für den Mikrocontroller verwenden wir einen RFID-Sensor von Amazon. Der Chip ist aus dem selben Paket.
 
 # Prozessbeschreibung
 Bevor Zeiten erfasst werden können, muss mindestens ein User existieren, dem eine RFID zugewiesen wurde.
@@ -33,9 +33,6 @@ Bereits eingeloggte User werden bei erneutem Stempeln ausgeloggt.
 Befehl              Ausgabe
 
 
-EPK!!!! LUKAS
-
-
 # API-Endpunkt-URL's
 - /zeiterfassung/sessions/getallactive --> alle noch eingeloggten, aktiven Nutzer/Sessions werden angezeigt
 - /zeiterfassung/sessions/update --> updatet alle einträge, entfernt ausgeloggte RFID's -> Updatet die Session wenn ein Chip erneut an den Sensor gehalten wurde
@@ -45,7 +42,3 @@ EPK!!!! LUKAS
 
 # Mikrocontroller/ Sensor
 ![image](https://github.com/einroggenbrot32/e2fi_arduino_rfid/assets/112704792/b5811dc8-a777-4e70-8b17-e7ace0457049)
-
-# CLI Tool
-Liste an Befehlen:
-Befehl            Ausgabe
