@@ -20,9 +20,13 @@ Bevor Zeiten erfasst werden können, muss mindestens ein User existieren, dem ei
 Danach kann ich per Befehl die Daten ausgeben oder auch über erneuten Kontakt mit dem Sensor die Session beenden.
 
 ## User erstellen und RFID zuweisen
+### GEPLANT:
 Im CLI-Tool kann über den Befehl "????" ein neues User angelegt werden. Dieser erhält eine Personalnummer und einen Namen. Letzterer wird vom Benutzer eingegeben.
 Anschließend kann über den Befehl "???? + Personalnummer" eine RFID zugewiesen werden. Der Benutzer wird aufgefordert, den RFID-Chip, den er zuweisen möchte, zu scannen (an den Sensor am Arduino zu halten).
 War die Zuweisung erfolgreich, bekommt der Benutzer eine Bestätigung über das CLI-Tool.
+
+### STAND JETZT:
+User müssen noch manuell auf der Datenbank angelegt werden. Siehe dazu die Befehle Unter ZeiterfassungAPI/SQL.
 
 ## Zeit erfassen
 Die Zeiterfassung erfolgt durch einfaches scannen(in folgenden Stempeln genannt) des jeweiligen RFID-Chips am Arduino/ Sensor.
